@@ -9,7 +9,7 @@
   --secendaryColor: #2c4755;
   --sectionHeadingColor: #ebeced;
   --secendaryFontColor:#333333;
-  
+  --paddingSection:30px;
 }
 
 body {
@@ -43,6 +43,9 @@ body {
 }
 /* End Global Roles */
 /* Start Header  */
+header{
+  padding: calc(var(--paddingSection)/2) 0;
+}
 header .container {
   position: relative;
   display: flex;
@@ -122,8 +125,8 @@ header .header-links nav a:not(:last-child){
   background-size: cover;
   background-position: center;
   /* this calc() to make landing section cover the page
-    Subtracted 30px height of header */
-  height: calc(100vh - 30px);
+    Subtracted 60px height of header */
+  height: calc(100vh - 60px);
 
 }
 .landing .container {
@@ -148,13 +151,14 @@ header .header-links nav a:not(:last-child){
 /* Start Features Sectio */
 .features{
   background-color: var(--sectionHeadingColor);
+  padding: var(--paddingSection) 0;
 }
 .features .container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
-  column-gap: 10px;
+  align-items: baseline;
+  column-gap: 50px;
 }
 .features .container .feat{
   display: flex;
@@ -169,5 +173,6 @@ header .header-links nav a:not(:last-child){
 .features .container .feat p{
 color: var(--secendaryFontColor);
 line-height: 2rem;
+text-align: center;
 }
 /* End Features Sectio */
