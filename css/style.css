@@ -120,6 +120,8 @@ header .header-links nav a:not(:last-child){
   background-image: url(../images/landing.jpg);
   background-size: cover;
   background-position: center;
+  /* this calc() to make landing section cover the page
+    Subtracted 30px height of header */
   height: calc(100vh - 30px);
 
 }
